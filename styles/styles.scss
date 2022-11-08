@@ -1,0 +1,483 @@
+@import url(fonts.css);
+
+// variables
+$darkYellow: #CC9933;
+$activeYellow: #A47312;
+$white: #ffffff;
+$accountHover: #F0BF5F;
+$titleSection: #333333;
+
+// extends
+%button {
+    display: inline-block;
+    border: 1px solid $darkYellow;
+    border-radius: 10px;
+    padding: 13px 20px;
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 0.5rem;
+    color: $darkYellow;
+}
+%buttonHover {
+    background: #CC9933;
+    color: $white;
+}
+%buttonActive {
+    background: $activeYellow;
+    color: $white;
+}
+%linkHover {
+    color: $darkYellow;
+}
+
+// MIXIN
+@mixin pictureOffer($addresImg) {
+    background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), $addresImg;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin arrowLink($color){
+    width: 11px;
+    height: 11px;
+    border-bottom: 2px solid $color;
+    border-right: 2px solid $color;
+    display: inline-block;
+    transform: rotate(-45deg);
+}
+@mixin servicesBCG($urlImg) {
+    background: $urlImg no-repeat;
+    background-size: cover;
+}
+@mixin advantageIcon($urlImg) {
+    background: $urlImg no-repeat;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body, html {
+    font-family: MullerR;
+    font-size: 16px;
+    line-height: 32px;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.conteiner {
+    width: 100%;
+    background: #F1F1F1;
+    padding: 30px 375px;
+}
+.section {
+    margin-bottom: 70px;
+}
+/* HEADER */
+.header {
+    width: 100%;
+    height: auto;
+    margin-bottom: 70px;
+}
+.header__firstRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.header__logoWrapper {
+    margin-right: 40px;
+}
+.header__logoWrapper > a {
+    display: inline-block;
+}
+.header__logo {
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+}
+.header__phoneWrapper {
+    flex-grow: 1;
+}
+.header__phoneLink {
+    font-family: 'MullerM';
+    font-size: 1.25rem;
+    line-height: 0.625rem;
+    color: #666666;
+}
+.header__accountWrapper > a > svg {
+    margin-right: 7px;
+}
+.header__accountWrapper > a {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 0.5rem;
+    color: $darkYellow;
+}
+.header__secondRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $white;
+    border-radius: 15px;
+    padding: 27px 45px;
+}
+.header__nav {
+    width: 59.5%;
+}
+.header__navList {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__navLink {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 0.5rem;
+    color: #666666;
+}
+.header__navLink:hover {
+    @extend %linkHover;
+}
+.header__navLink:active {
+    color: $activeYellow;
+}
+
+.header__buttonBlock {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.button {
+    @extend %button;
+}
+
+// SECTION OFFER
+.section__title {
+    font-family: 'MullerR';
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: $titleSection;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+.offers__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: auto;
+    gap: 24px;
+}
+.offers__item {
+    width: 100%;
+    height: 100%;
+    padding: 40px 45px;
+    border-radius: 15px;
+}
+.maldive {
+    @include pictureOffer(url(../img/offers/maldives.png));
+}
+.crit {
+    @include pictureOffer(url(../img/offers/crit.png));
+    grid-column-start: 1;
+}
+.lux {
+    background:url(../img/offers/lux.png) no-repeat;
+    background-size: cover;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    padding-top: 320px;
+}
+.lux > .offers__title {
+    font-family: 'MullerB';
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+    color: $white;
+}
+.lux > .offers__price {
+    font-family: 'MullerR';
+    font-size: 1.875rem;
+    line-height: 1rem;
+    color: $white;
+    opacity: 0.8;
+}
+.offers__title {
+    font-family: 'MullerB';
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: $white;
+    max-width: 80%;
+    margin-bottom: 15px;
+}
+.offers__price {
+    font-family: 'MullerR';
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    color: $white;
+    opacity: 0.8;
+    margin-bottom: 47px;
+}
+.offers__link a {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 1rem;
+    color: $accountHover;
+}
+.offers__link span {
+    @include arrowLink($accountHover);
+}
+
+// ABOUT 
+.about__content {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 200%;
+    color: #000000;
+    max-width: 77%;
+}
+
+// SERVICES
+.services__wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.services__item {
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.services__item > span {
+    display: inline-block;
+    width: 100%;
+    height: 160px;
+    border-top-right-radius: 15px;
+}
+.one > span {
+    @include servicesBCG(url(../img/services/1.png));
+}
+.two > span {
+    @include servicesBCG(url(../img/services/2.png));
+}
+.three > span {
+    @include servicesBCG(url(../img/services/3.png));
+}
+.for > span {
+    @include servicesBCG(url(../img/services/4.png));
+}
+.services__contentWrapper {
+    width: 100%;
+    height: 50%;
+    padding: 26px 126px 35px 45px;
+}
+.services__link {
+    font-family: 'MullerM';
+    font-size: 1.25rem;
+    line-height: 200%;
+    color: $darkYellow;
+}
+.services__link > span {
+    @include arrowLink($darkYellow);
+}
+.services__text {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 200%;
+    color: #000000;
+}
+
+// ADVANTAGES STYLE
+.advantages__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+.advantage__item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px 42px 32px 45px;
+    width: 100%;
+    height: 100%;
+}
+.advantage__item > span {
+    display: inline-block;
+    width: 100%;
+    height: 66px;
+    margin-bottom: 10px;
+}
+.advantage__one > span {
+    @include advantageIcon(url(../img/advantages/1.svg));
+}
+.advantage__two > span {
+    @include advantageIcon(url(../img/advantages/2.svg));
+}
+.advantage__three > span {
+    @include advantageIcon(url(../img/advantages/3.svg));
+}
+.advantage__for > span {
+    @include advantageIcon(url(../img/advantages/4.svg));
+}
+.advantage__five > span {
+    @include advantageIcon(url(../img/advantages/5.svg));
+}
+.advantage__six > span {
+    @include advantageIcon(url(../img/advantages/6.svg));
+}
+.advantage__seven > span {
+    @include advantageIcon(url(../img/advantages/7.svg));
+}
+.advantage__eight > span {
+    @include advantageIcon(url(../img/advantages/8.svg));
+}
+.advantage__text {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 200%;
+    color: #000000;
+}
+
+// PLACEMENT STYLE
+.placement__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.placement__item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.placement__item:last-child {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: url(../img/placement/background.png) no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: end;
+    padding-bottom: 27px;
+}
+.placement__img {
+    width: 100%;
+}
+.placement__img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.placement__info {
+    padding: 32px 45px 45px;
+    width: 100%;
+}
+.placement__top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.placement__price {
+    font-family: 'MullerR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 16px;
+    color: #000000;
+}
+.placement__price > span {
+    color: #999999;
+}
+.placement__middle {
+    margin-bottom: 20px;
+}
+.placement__name {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 16px;
+    color: #000000;
+    margin-bottom: 16px;
+}
+.placement__country {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 16px;
+    color: #999999;
+}
+.placement__link {
+    font-family: 'MullerM';
+    font-size: 1.25rem;
+    line-height: 200%;
+    color: $white;
+}
+.placement__link > span {
+    @include arrowLink($white);
+}
+// STATE STYLE
+// Phone hover
+.header__phoneLink:hover {
+    @extend %linkHover;
+}
+// Phone active
+.header__phoneLink:active {
+    color: $activeYellow;
+}
+// Account hover
+.header__accountWrapper:hover > a {
+    color: $accountHover;
+}
+.header__accountWrapper:hover > a > svg > path {
+    fill:  $accountHover;
+}
+// Account active
+.header__accountWrapper:active > a {
+    color: $darkYellow;
+}
+.header__accountWrapper:active > a > svg > path {
+    fill:  $activeYellow;
+}
+// Button hover
+.button:hover {
+    @extend %buttonHover;
+}
+// Button active
+.button:active {
+    @extend %buttonActive;
+}
+
+// Offers link active
+.offers__link:active a{
+    color: $white;
+}
+
+// Services link over
+.services__link:hover {
+    color: $accountHover;
+}
+.services__link:hover > span {
+    @include arrowLink($accountHover);
+}
+
+// Services link active
+.services__link:active {
+    color: $activeYellow;
+}
+.services__link:active > span {
+    @include arrowLink($activeYellow);
+}

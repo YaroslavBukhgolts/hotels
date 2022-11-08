@@ -1,0 +1,528 @@
+@import url(fonts.css);
+.button {
+  display: inline-block;
+  border: 1px solid #CC9933;
+  border-radius: 10px;
+  padding: 13px 20px;
+  font-family: "MullerR";
+  font-size: 1rem;
+  line-height: 0.5rem;
+  color: #CC9933;
+}
+
+.button:hover {
+  background: #CC9933;
+  color: #ffffff;
+}
+
+.button:active {
+  background: #A47312;
+  color: #ffffff;
+}
+
+.header__phoneLink:hover, .header__navLink:hover {
+  color: #CC9933;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+  font-family: MullerR;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.conteiner {
+  width: 100%;
+  background: #F1F1F1;
+  padding: 30px 375px;
+}
+
+.section {
+  margin-bottom: 70px;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  height: auto;
+  margin-bottom: 70px;
+}
+
+.header__firstRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header__logoWrapper {
+  margin-right: 40px;
+}
+
+.header__logoWrapper > a {
+  display: inline-block;
+}
+
+.header__logo {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+.header__phoneWrapper {
+  flex-grow: 1;
+}
+
+.header__phoneLink {
+  font-family: "MullerM";
+  font-size: 1.25rem;
+  line-height: 0.625rem;
+  color: #666666;
+}
+
+.header__accountWrapper > a > svg {
+  margin-right: 7px;
+}
+
+.header__accountWrapper > a {
+  font-family: "MullerR";
+  font-size: 1rem;
+  line-height: 0.5rem;
+  color: #CC9933;
+}
+
+.header__secondRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 27px 45px;
+}
+
+.header__nav {
+  width: 59.5%;
+}
+
+.header__navList {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__navLink {
+  font-family: "MullerR";
+  font-size: 1rem;
+  line-height: 0.5rem;
+  color: #666666;
+}
+
+.header__navLink:active {
+  color: #A47312;
+}
+
+.header__buttonBlock {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section__title {
+  font-family: "MullerR";
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: #333333;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.offers__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  height: auto;
+  gap: 24px;
+}
+
+.offers__item {
+  width: 100%;
+  height: 100%;
+  padding: 40px 45px;
+  border-radius: 15px;
+}
+
+.maldive {
+  background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url(../img/offers/maldives.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.crit {
+  background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url(../img/offers/crit.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column-start: 1;
+}
+
+.lux {
+  background: url(../img/offers/lux.png) no-repeat;
+  background-size: cover;
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-end: 3;
+  padding-top: 320px;
+}
+
+.lux > .offers__title {
+  font-family: "MullerB";
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+  color: #ffffff;
+}
+
+.lux > .offers__price {
+  font-family: "MullerR";
+  font-size: 1.875rem;
+  line-height: 1rem;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.offers__title {
+  font-family: "MullerB";
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: #ffffff;
+  max-width: 80%;
+  margin-bottom: 15px;
+}
+
+.offers__price {
+  font-family: "MullerR";
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #ffffff;
+  opacity: 0.8;
+  margin-bottom: 47px;
+}
+
+.offers__link a {
+  font-family: "MullerR";
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #F0BF5F;
+}
+
+.offers__link span {
+  width: 11px;
+  height: 11px;
+  border-bottom: 2px solid #F0BF5F;
+  border-right: 2px solid #F0BF5F;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+.about__content {
+  font-family: "MullerR";
+  font-size: 1rem;
+  line-height: 200%;
+  color: #000000;
+  max-width: 77%;
+}
+
+.services__wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.services__item {
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.services__item > span {
+  display: inline-block;
+  width: 100%;
+  height: 160px;
+  border-top-right-radius: 15px;
+}
+
+.one > span {
+  background: url(../img/services/1.png) no-repeat;
+  background-size: cover;
+}
+
+.two > span {
+  background: url(../img/services/2.png) no-repeat;
+  background-size: cover;
+}
+
+.three > span {
+  background: url(../img/services/3.png) no-repeat;
+  background-size: cover;
+}
+
+.for > span {
+  background: url(../img/services/4.png) no-repeat;
+  background-size: cover;
+}
+
+.services__contentWrapper {
+  width: 100%;
+  height: 50%;
+  padding: 26px 126px 35px 45px;
+}
+
+.services__link {
+  font-family: "MullerM";
+  font-size: 1.25rem;
+  line-height: 200%;
+  color: #CC9933;
+}
+
+.services__link > span {
+  width: 11px;
+  height: 11px;
+  border-bottom: 2px solid #CC9933;
+  border-right: 2px solid #CC9933;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+.services__text {
+  font-family: "MullerR";
+  font-size: 1rem;
+  line-height: 200%;
+  color: #000000;
+}
+
+.advantages__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.advantage__item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 40px 42px 32px 45px;
+  width: 100%;
+  height: 100%;
+}
+
+.advantage__item > span {
+  display: inline-block;
+  width: 100%;
+  height: 66px;
+  margin-bottom: 10px;
+}
+
+.advantage__one > span {
+  background: url(../img/advantages/1.svg) no-repeat;
+}
+
+.advantage__two > span {
+  background: url(../img/advantages/2.svg) no-repeat;
+}
+
+.advantage__three > span {
+  background: url(../img/advantages/3.svg) no-repeat;
+}
+
+.advantage__for > span {
+  background: url(../img/advantages/4.svg) no-repeat;
+}
+
+.advantage__five > span {
+  background: url(../img/advantages/5.svg) no-repeat;
+}
+
+.advantage__six > span {
+  background: url(../img/advantages/6.svg) no-repeat;
+}
+
+.advantage__seven > span {
+  background: url(../img/advantages/7.svg) no-repeat;
+}
+
+.advantage__eight > span {
+  background: url(../img/advantages/8.svg) no-repeat;
+}
+
+.advantage__text {
+  font-family: "MullerR";
+  font-size: 1rem;
+  line-height: 200%;
+  color: #000000;
+}
+
+.placement__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.placement__item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.placement__item:last-child {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: url(../img/placement/background.png) no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 27px;
+}
+
+.placement__img {
+  width: 100%;
+}
+
+.placement__img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.placement__info {
+  padding: 32px 45px 45px;
+  width: 100%;
+}
+
+.placement__top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.placement__price {
+  font-family: "MullerR";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 16px;
+  color: #000000;
+}
+
+.placement__price > span {
+  color: #999999;
+}
+
+.placement__middle {
+  margin-bottom: 20px;
+}
+
+.placement__name {
+  font-family: "MullerR";
+  font-size: 1rem;
+  line-height: 16px;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.placement__country {
+  font-family: "MullerR";
+  font-size: 1rem;
+  line-height: 16px;
+  color: #999999;
+}
+
+.placement__link {
+  font-family: "MullerM";
+  font-size: 1.25rem;
+  line-height: 200%;
+  color: #ffffff;
+}
+
+.placement__link > span {
+  width: 11px;
+  height: 11px;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+.header__phoneLink:active {
+  color: #A47312;
+}
+
+.header__accountWrapper:hover > a {
+  color: #F0BF5F;
+}
+
+.header__accountWrapper:hover > a > svg > path {
+  fill: #F0BF5F;
+}
+
+.header__accountWrapper:active > a {
+  color: #CC9933;
+}
+
+.header__accountWrapper:active > a > svg > path {
+  fill: #A47312;
+}
+
+.offers__link:active a {
+  color: #ffffff;
+}
+
+.services__link:hover {
+  color: #F0BF5F;
+}
+
+.services__link:hover > span {
+  width: 11px;
+  height: 11px;
+  border-bottom: 2px solid #F0BF5F;
+  border-right: 2px solid #F0BF5F;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+.services__link:active {
+  color: #A47312;
+}
+
+.services__link:active > span {
+  width: 11px;
+  height: 11px;
+  border-bottom: 2px solid #A47312;
+  border-right: 2px solid #A47312;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+/*# sourceMappingURL=styles.css.map */
