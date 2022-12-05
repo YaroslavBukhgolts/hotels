@@ -17,6 +17,7 @@ $titleSection: #333333;
     font-size: 1rem;
     line-height: 0.5rem;
     color: $darkYellow;
+    background: $white;
 }
 %buttonHover {
     background: #CC9933;
@@ -429,17 +430,254 @@ a {
 .placement__link > span {
     @include arrowLink($white);
 }
+
+// FORM STYLE
+.form {
+    width: 100%;
+    height: 100%;
+    background-color: #E9E9E9;
+    border-radius: 15px;
+    padding: 45px;
+}
+.form__title {
+    margin-left: 0;
+}
+.form__wrapper {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 32px 28px;
+    width: 100%;
+    height: 100%;
+}
+.form__formSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.form__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 3px;
+}
+.form__col:nth-child(4),
+.form__col:nth-child(5) {
+    border-bottom: 1px solid #E9E9E9;
+}
+.form__label {
+    font-family: 'MullerR';
+    font-size: 0.75rem;
+    color: #000000;
+}
+.form__select {
+    width: 169px;
+    border: none;
+    font-family: 'MullerR';
+    font-size: 1rem;
+    color: #000000;
+}
+.form__input {
+    width: 121px;
+    border: none;
+    font-family: 'MullerR';
+    font-size: 1rem;
+    color: #000000;
+}
+.form__row {
+    display: flex;
+    align-items: center;
+}
+.form__btnBlock {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+.form__arrow {
+    width: 15px;
+    height: 6px;
+    background-image: url(../img/btn-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #E9E9E9;
+    border: none;
+    padding: 1px 4px;
+    cursor: pointer;
+}
+.form__arrow:nth-child(2n) {
+    transform: rotate(180deg);
+}
+.form__button {
+    padding: 13px 30px;
+}
+
+// CONTACTS STYLE
+.contacts__wrapper {
+    height: 66vh;
+    width: 100%;
+    background-color: $white;
+    border-radius: 15px;
+    padding: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contacts__leftColumn {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 36%;
+    margin-right: 4%;
+}
+.contacts__rightColumn {
+    height: 100%;
+    width: 60%;
+    background: url(../img/contacts-bg.png);
+    background-size: cover;
+    border-radius: 15px;
+}
+.contactsList {
+    list-style-type: none;
+    margin-bottom: 45px;
+}
+.contactsItem {
+    display: flex;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #E9E9E9;
+    align-items: baseline;
+}
+.contactsItem > address {
+    font-family: 'MullerR';
+    font-style: normal;
+    font-size: 1rem;
+    color: #000000;
+}
+.contactsItem:not(:last-child) {
+    margin-bottom: 25px;
+}
+.contacts__title {
+    flex-basis: 39%;
+    font-family: 'MullerB';
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 20px;
+    color: #000000;
+}
+.contacts__link {
+    display: flex;
+    flex-direction: column;
+}
+.contacts__link > a {
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #CC9933;
+}
+.contacts__link > div {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 150%;
+    color: #999999;
+}
+.contacts__time {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 150%;
+    color: #000000;
+}
+.contacts__button {
+    padding: 27px 29.5px;
+}
+
+// FOOTER
+.footer__wrapper {
+    display: flex;
+    background-image: url(../img/footer-bg.png);
+    background-repeat: no-repeat;
+    background-color: #333333;
+    color: #fff;
+    padding: 45px;
+    background-position-y: bottom;
+    background-position-x: 80%;
+}
+.footer__left {
+    display: flex;
+    flex-direction: column;
+    max-width: 302px;
+    margin-right: 125px;
+}
+.footer__copyright,
+.footer__infoText {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 190%;
+    color: #FFFFFF;
+    margin-bottom: 37px;
+}
+.footer__infoText {
+    margin-bottom: 40px;
+}   
+.footer__link {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 150%;
+    color: $darkYellow;  
+}
+.footer__center {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.footer__address {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 30px;
+    color: $white;
+}
+.footer__phone {
+    display: flex;
+    flex-direction: column;
+}
+.footer__link {
+    font-family: 'MullerR';
+    font-size: 1rem;
+    line-height: 150%;
+    color: $darkYellow;
+}
+.footer__email {
+    display: flex;
+    flex-direction: column;
+}
+.footer__socialList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.footer__socialLink {
+    display: inline-block;
+    width: 25px;
+    height: 24px;
+    background-color: $white;
+    border-radius: 50%;
+}
+
 // STATE STYLE
 // Phone hover
 .header__phoneLink:hover {
     @extend %linkHover;
 }
 // Phone active
-.header__phoneLink:active {
+.header__phoneLink:active{
     color: $activeYellow;
 }
 // Account hover
-.header__accountWrapper:hover > a {
+.header__accountWrapper:hover > a,
+.contacts__link > a:hover {
     color: $accountHover;
 }
 .header__accountWrapper:hover > a > svg > path {
@@ -480,4 +718,27 @@ a {
 }
 .services__link:active > span {
     @include arrowLink($activeYellow);
+}
+
+// Contacts link
+//hover
+.contacts__link > a:hover,
+.footer__link:hover {
+    color: $accountHover;
+}
+// active
+.contacts__link > a:active,
+.footer__link:active {
+    color: $activeYellow;
+}
+// FOOTER SOCIAL
+// hover
+.footer__socialLink:hover > svg > g > path,
+.footer__socialLink:hover > svg > path {
+    fill: $darkYellow;
+}
+// active
+.footer__socialLink:active > svg > g > path,
+.footer__socialLink:active > svg > path {
+    fill: $activeYellow;
 }
