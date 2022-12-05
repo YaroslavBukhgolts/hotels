@@ -530,12 +530,20 @@ a {
   color: #000000;
 }
 
+.form__select:focus {
+  outline: none;
+}
+
 .form__input {
   width: 121px;
   border: none;
   font-family: "MullerR";
   font-size: 1rem;
   color: #000000;
+}
+
+.form__input:focus {
+  outline: none;
 }
 
 .form__row {

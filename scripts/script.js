@@ -5,18 +5,27 @@ let btnDownTurist = document.getElementById('downT'); // btn down
 let inputNight = document.getElementById('night'); // input night
 let inputTurists = document.getElementById('turists'); // input night
 
-let counter = 0;
-inputNight.setAttribute('value', counter);
-inputTurists.setAttribute('value', counter);
+let counterN = 0;
+let counterT = 0;
+inputNight.setAttribute('value', counterN);
+inputTurists.setAttribute('value', counterT);
+
+inputNight.addEventListener('change', ()=>{
+    counterN = +inputNight.value;
+})
+
+inputTurists.addEventListener('change', ()=>{
+    counterT = +inputTurists.value;
+})
 
 function upN(){
-    counter += 1;
-    inputNight.setAttribute('value', counter);
+    counterN += 1;
+    inputNight.value = counterN;
 }
 function downN(){
     if(inputNight.value > 0) {
-        counter -= 1;
-        inputNight.setAttribute('value', counter);
+        counterN -= 1;
+        inputNight.value = counterN;
     }else {
         btnDownNight.setAttribute('disabled');
     }
@@ -24,14 +33,14 @@ function downN(){
 }
 
 function upT(){
-    counter += 1;
-    inputTurists.setAttribute('value', counter);
+    counterT += 1;
+    inputTurists.value = counterT;
 }
 
 function downT(){
     if(inputTurists.value > 0) {
-        counter -= 1;
-        inputTurists.setAttribute('value', counter);
+        counterT -= 1;
+        inputTurists.value = counterT;
     }else {
         btnDownTurist.setAttribute('disabled');
     }
