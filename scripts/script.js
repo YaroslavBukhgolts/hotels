@@ -18,36 +18,32 @@ inputTurists.addEventListener('change', ()=>{
     counterT = +inputTurists.value;
 })
 
-function upN(){
+// NIGHT
+btnUpNight.addEventListener('click', function (){
     counterN += 1;
     inputNight.value = counterN;
-}
-function downN(){
+});
+
+btnDownNight.addEventListener('click', function(){
     if(inputNight.value > 0) {
         counterN -= 1;
         inputNight.value = counterN;
     }else {
         btnDownNight.setAttribute('disabled');
     }
-    
-}
+});
 
-function upT(){
+// TURISTS
+btnUpTurist.addEventListener('click', function(){
     counterT += 1;
     inputTurists.value = counterT;
-}
+});
 
-function downT(){
+btnDownTurist.addEventListener('click', function(){
     if(inputTurists.value > 0) {
         counterT -= 1;
         inputTurists.value = counterT;
     }else {
         btnDownTurist.setAttribute('disabled');
     }
-}
-
-btnUpNight.addEventListener('click', upN);
-btnDownNight.addEventListener('click', downN);
-
-btnUpTurist.addEventListener('click', upT);
-btnDownTurist.addEventListener('click', downT);
+});
